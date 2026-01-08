@@ -21868,15 +21868,15 @@ items:
   kind: Job
   metadata:
     annotations:
-      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T06:40:00Z"
-    creationTimestamp: "2026-01-08T06:40:00Z"
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T12:40:00Z"
+    creationTimestamp: "2026-01-08T12:40:00Z"
     generation: 1
     labels:
-      batch.kubernetes.io/controller-uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
-      batch.kubernetes.io/job-name: uk-emiconnect-emipago-payments-29464240
-      controller-uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
-      job-name: uk-emiconnect-emipago-payments-29464240
-    name: uk-emiconnect-emipago-payments-29464240
+      batch.kubernetes.io/controller-uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
+      batch.kubernetes.io/job-name: uk-emiconnect-emipago-payments-29464600
+      controller-uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
+      job-name: uk-emiconnect-emipago-payments-29464600
+    name: uk-emiconnect-emipago-payments-29464600
     namespace: kuepa
     ownerReferences:
     - apiVersion: batch/v1
@@ -21885,8 +21885,8 @@ items:
       kind: CronJob
       name: uk-emiconnect-emipago-payments
       uid: e8dbd7a6-e982-4198-b10f-802137d7cc57
-    resourceVersion: "1767854404483055010"
-    uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
+    resourceVersion: "1767876004517743020"
+    uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
   spec:
     backoffLimit: 6
     completionMode: NonIndexed
@@ -21896,16 +21896,16 @@ items:
     podReplacementPolicy: TerminatingOrFailed
     selector:
       matchLabels:
-        batch.kubernetes.io/controller-uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
+        batch.kubernetes.io/controller-uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
     suspend: false
     template:
       metadata:
         creationTimestamp: null
         labels:
-          batch.kubernetes.io/controller-uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
-          batch.kubernetes.io/job-name: uk-emiconnect-emipago-payments-29464240
-          controller-uid: fbecd91d-a419-4f3d-b09d-31152cc8c3d4
-          job-name: uk-emiconnect-emipago-payments-29464240
+          batch.kubernetes.io/controller-uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
+          batch.kubernetes.io/job-name: uk-emiconnect-emipago-payments-29464600
+          controller-uid: ad03ce01-04c3-4cc5-8250-7e3c7b7de2e6
+          job-name: uk-emiconnect-emipago-payments-29464600
       spec:
         containers:
         - command:
@@ -21925,22 +21925,22 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
   status:
-    completionTime: "2026-01-08T06:40:04Z"
+    completionTime: "2026-01-08T12:40:04Z"
     conditions:
-    - lastProbeTime: "2026-01-08T06:40:04Z"
-      lastTransitionTime: "2026-01-08T06:40:04Z"
+    - lastProbeTime: "2026-01-08T12:40:04Z"
+      lastTransitionTime: "2026-01-08T12:40:04Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: SuccessCriteriaMet
-    - lastProbeTime: "2026-01-08T06:40:04Z"
-      lastTransitionTime: "2026-01-08T06:40:04Z"
+    - lastProbeTime: "2026-01-08T12:40:04Z"
+      lastTransitionTime: "2026-01-08T12:40:04Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: Complete
     ready: 0
-    startTime: "2026-01-08T06:40:00Z"
+    startTime: "2026-01-08T12:40:00Z"
     succeeded: 1
     terminating: 0
     uncountedTerminatedPods: {}
@@ -23543,7 +23543,7 @@ items:
       k8slens-edit-resource-version: v1
     name: uk-emiconnect-emipago-payments
     namespace: kuepa
-    resourceVersion: "1767854404553631016"
+    resourceVersion: "1767876004585471016"
     uid: e8dbd7a6-e982-4198-b10f-802137d7cc57
   spec:
     concurrencyPolicy: Replace
@@ -23578,8 +23578,8 @@ items:
     successfulJobsHistoryLimit: 1
     suspend: false
   status:
-    lastScheduleTime: "2026-01-08T06:40:00Z"
-    lastSuccessfulTime: "2026-01-08T06:40:04Z"
+    lastScheduleTime: "2026-01-08T12:40:00Z"
+    lastSuccessfulTime: "2026-01-08T12:40:04Z"
 - apiVersion: batch/v1
   kind: CronJob
   metadata:

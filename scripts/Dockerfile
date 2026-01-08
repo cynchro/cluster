@@ -13,6 +13,7 @@ WORKDIR /app
 COPY snapshot.sh /app/snapshot.sh
 COPY generate_cluster_doc.py /app/generate_cluster_doc.py
 COPY generate_diagram.py /app/generate_diagram.py
+COPY inject_diagram_into_cluster_doc.py /app/inject_diagram_into_cluster_doc.py
 
 # Dar permisos de ejecución
 RUN chmod +x /app/snapshot.sh
