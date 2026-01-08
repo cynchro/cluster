@@ -47,43 +47,66 @@ for ns in ns_apps:
 
 with open(OUT, "w") as f:
     f.write("```mermaid\n")
-    f.write("graph TB\n\n")  # Cambiar a TB (Top to Bottom) para mejor layout vertical
-    f.write(f"GCP[\"GCP Project\"]\n")
-    f.write(f"VPC[\"VPC: {network}\"]\n")
-    f.write(f"CLUSTER[\"GKE: {cluster_name}<br/>{zone}\"]\n\n")
-
-    f.write("GCP --> VPC --> CLUSTER\n\n")
-
-    # node_pools puede ser una lista o un objeto con items
+    f.write("flowchart TB\n\n")  # Usar flowchart TB para mejor control del layout
+    
+    # Nivel 1: Infraestructura
+    f.write("subgraph INFRA[\"Infraestructura GCP\"]\n")
+    f.write(f"  GCP[\"GCP Project\"]\n")
+    f.write(f"  VPC[\"VPC: {network}\"]\n")
+    f.write("end\n\n")
+    
+    # Nivel 2: Cluster
+    f.write(f"CLUSTER[\"GKE Cluster<br/>{cluster_name}<br/>{zone}\"]\n\n")
+    
+    # Conexiones infraestructura
+    f.write("GCP --> VPC\n")
+    f.write("VPC --> CLUSTER\n\n")
+    
+    # Nivel 3: Node Pools
     pools_list = node_pools if isinstance(node_pools, list) else (node_pools if node_pools else [])
-    for np in pools_list:
-        np_name = np["name"]
-        np_id = clean_id(f"NP_{np_name}")
-        f.write(f"CLUSTER --> {np_id}[\"NodePool: {np_name}\"]\n")
-
-    f.write("\n")
-
+    if pools_list:
+        f.write("subgraph NODES[\"Node Pools\"]\n")
+        for np in pools_list:
+            np_name = np["name"]
+            np_id = clean_id(f"NP_{np_name}")
+            f.write(f"  {np_id}[\"NodePool: {np_name}\"]\n")
+        f.write("end\n\n")
+        f.write("CLUSTER --> NODES\n\n")
+    
+    # Nivel 4: Namespaces con subgrafos para mejor organización vertical
     for ns, apps in ns_apps.items():
         ns_id = clean_id(f"NS_{ns}")
-        f.write(f"CLUSTER --> {ns_id}[\"Namespace: {ns}\"]\n")
+        ns_label = ns.replace('"', '\\"')
+        f.write(f"subgraph {ns_id}[\"Namespace: {ns_label}\"]\n")
         for app in apps:
             app_id = clean_id(f"APP_{ns}_{app}")
-            # Escapar comillas en el label
             app_label = str(app).replace('"', '\\"')
-            f.write(f"{ns_id} --> {app_id}[\"{app_label}\"]\n")
-
-    f.write("\n")
-
-    for i in ingress:
-        ns = i["metadata"]["namespace"]
-        name = i["metadata"]["name"]
-        ing_id = clean_id(f"ING_{name}")
-        ns_id = clean_id(f"NS_{ns}")
-        f.write(f"{ing_id}[\"Ingress: {name}\"]\n")
-        f.write(f"{ing_id} --> Internet\n")
-        f.write(f"{ns_id} --> {ing_id}\n")
-
-    f.write("\nInternet((Internet))\n")
+            f.write(f"  {app_id}[\"{app_label}\"]\n")
+        f.write("end\n\n")
+        f.write(f"CLUSTER --> {ns_id}\n\n")
+    
+    # Nivel 5: Ingress
+    if ingress:
+        f.write("subgraph INGRESS[\"Ingress Resources\"]\n")
+        for i in ingress:
+            name = i["metadata"]["name"]
+            ing_id = clean_id(f"ING_{name}")
+            ing_label = name.replace('"', '\\"')
+            f.write(f"  {ing_id}[\"Ingress: {ing_label}\"]\n")
+        f.write("end\n\n")
+        
+        # Conectar ingress a namespaces e internet
+        for i in ingress:
+            ns = i["metadata"]["namespace"]
+            name = i["metadata"]["name"]
+            ing_id = clean_id(f"ING_{name}")
+            ns_id = clean_id(f"NS_{ns}")
+            f.write(f"{ns_id} --> {ing_id}\n")
+            f.write(f"{ing_id} --> Internet\n")
+        f.write("\n")
+    
+    # Internet al final
+    f.write("Internet((Internet))\n")
     f.write("```\n")
 
 print("✅ Diagrama Mermaid generado")

@@ -22186,15 +22186,15 @@ items:
   kind: Job
   metadata:
     annotations:
-      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T12:30:00Z"
-    creationTimestamp: "2026-01-08T12:30:00Z"
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T13:30:00Z"
+    creationTimestamp: "2026-01-08T13:30:00Z"
     generation: 1
     labels:
-      batch.kubernetes.io/controller-uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
-      batch.kubernetes.io/job-name: uk-emiconnect-twilio-calls-29464590
-      controller-uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
-      job-name: uk-emiconnect-twilio-calls-29464590
-    name: uk-emiconnect-twilio-calls-29464590
+      batch.kubernetes.io/controller-uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
+      batch.kubernetes.io/job-name: uk-emiconnect-twilio-calls-29464650
+      controller-uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
+      job-name: uk-emiconnect-twilio-calls-29464650
+    name: uk-emiconnect-twilio-calls-29464650
     namespace: kuepa
     ownerReferences:
     - apiVersion: batch/v1
@@ -22203,8 +22203,8 @@ items:
       kind: CronJob
       name: uk-emiconnect-twilio-calls
       uid: ea31b6c4-818e-46c6-911b-8e5d266e7bcd
-    resourceVersion: "1767875405595567019"
-    uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
+    resourceVersion: "1767879005070159015"
+    uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
   spec:
     backoffLimit: 6
     completionMode: NonIndexed
@@ -22214,16 +22214,16 @@ items:
     podReplacementPolicy: TerminatingOrFailed
     selector:
       matchLabels:
-        batch.kubernetes.io/controller-uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
+        batch.kubernetes.io/controller-uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
     suspend: false
     template:
       metadata:
         creationTimestamp: null
         labels:
-          batch.kubernetes.io/controller-uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
-          batch.kubernetes.io/job-name: uk-emiconnect-twilio-calls-29464590
-          controller-uid: 2429dc45-8b02-4965-af26-7232a4ee3ba0
-          job-name: uk-emiconnect-twilio-calls-29464590
+          batch.kubernetes.io/controller-uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
+          batch.kubernetes.io/job-name: uk-emiconnect-twilio-calls-29464650
+          controller-uid: e7cec333-3d69-49d8-85dc-d6d9452dc9b1
+          job-name: uk-emiconnect-twilio-calls-29464650
       spec:
         containers:
         - command:
@@ -22243,22 +22243,22 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
   status:
-    completionTime: "2026-01-08T12:30:05Z"
+    completionTime: "2026-01-08T13:30:04Z"
     conditions:
-    - lastProbeTime: "2026-01-08T12:30:05Z"
-      lastTransitionTime: "2026-01-08T12:30:05Z"
+    - lastProbeTime: "2026-01-08T13:30:04Z"
+      lastTransitionTime: "2026-01-08T13:30:04Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: SuccessCriteriaMet
-    - lastProbeTime: "2026-01-08T12:30:05Z"
-      lastTransitionTime: "2026-01-08T12:30:05Z"
+    - lastProbeTime: "2026-01-08T13:30:05Z"
+      lastTransitionTime: "2026-01-08T13:30:05Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: Complete
     ready: 0
-    startTime: "2026-01-08T12:30:00Z"
+    startTime: "2026-01-08T13:30:00Z"
     succeeded: 1
     terminating: 0
     uncountedTerminatedPods: {}
@@ -22345,15 +22345,15 @@ items:
   kind: Job
   metadata:
     annotations:
-      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T12:30:00Z"
-    creationTimestamp: "2026-01-08T12:30:00Z"
+      batch.kubernetes.io/cronjob-scheduled-timestamp: "2026-01-08T13:30:00Z"
+    creationTimestamp: "2026-01-08T13:30:00Z"
     generation: 1
     labels:
-      batch.kubernetes.io/controller-uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
-      batch.kubernetes.io/job-name: uk-emiconnect-twilio-messages-29464590
-      controller-uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
-      job-name: uk-emiconnect-twilio-messages-29464590
-    name: uk-emiconnect-twilio-messages-29464590
+      batch.kubernetes.io/controller-uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
+      batch.kubernetes.io/job-name: uk-emiconnect-twilio-messages-29464650
+      controller-uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
+      job-name: uk-emiconnect-twilio-messages-29464650
+    name: uk-emiconnect-twilio-messages-29464650
     namespace: kuepa
     ownerReferences:
     - apiVersion: batch/v1
@@ -22362,8 +22362,8 @@ items:
       kind: CronJob
       name: uk-emiconnect-twilio-messages
       uid: 83c65489-199b-4c3a-9731-b63fb1e0f48d
-    resourceVersion: "1767875405432255017"
-    uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
+    resourceVersion: "1767879005109519015"
+    uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
   spec:
     backoffLimit: 6
     completionMode: NonIndexed
@@ -22373,16 +22373,16 @@ items:
     podReplacementPolicy: TerminatingOrFailed
     selector:
       matchLabels:
-        batch.kubernetes.io/controller-uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
+        batch.kubernetes.io/controller-uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
     suspend: false
     template:
       metadata:
         creationTimestamp: null
         labels:
-          batch.kubernetes.io/controller-uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
-          batch.kubernetes.io/job-name: uk-emiconnect-twilio-messages-29464590
-          controller-uid: 1ad152e1-3d2f-4aac-96c2-cb61828e352b
-          job-name: uk-emiconnect-twilio-messages-29464590
+          batch.kubernetes.io/controller-uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
+          batch.kubernetes.io/job-name: uk-emiconnect-twilio-messages-29464650
+          controller-uid: 5641e42a-9dca-40dc-bfa6-6ba68d5bdbdb
+          job-name: uk-emiconnect-twilio-messages-29464650
       spec:
         containers:
         - command:
@@ -22402,22 +22402,22 @@ items:
         securityContext: {}
         terminationGracePeriodSeconds: 30
   status:
-    completionTime: "2026-01-08T12:30:05Z"
+    completionTime: "2026-01-08T13:30:05Z"
     conditions:
-    - lastProbeTime: "2026-01-08T12:30:05Z"
-      lastTransitionTime: "2026-01-08T12:30:05Z"
+    - lastProbeTime: "2026-01-08T13:30:05Z"
+      lastTransitionTime: "2026-01-08T13:30:05Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: SuccessCriteriaMet
-    - lastProbeTime: "2026-01-08T12:30:05Z"
-      lastTransitionTime: "2026-01-08T12:30:05Z"
+    - lastProbeTime: "2026-01-08T13:30:05Z"
+      lastTransitionTime: "2026-01-08T13:30:05Z"
       message: Reached expected number of succeeded pods
       reason: CompletionsReached
       status: "True"
       type: Complete
     ready: 0
-    startTime: "2026-01-08T12:30:00Z"
+    startTime: "2026-01-08T13:30:00Z"
     succeeded: 1
     terminating: 0
     uncountedTerminatedPods: {}
@@ -23641,7 +23641,7 @@ items:
       k8slens-edit-resource-version: v1
     name: uk-emiconnect-twilio-calls
     namespace: kuepa
-    resourceVersion: "1767875405658383016"
+    resourceVersion: "1767879005152607016"
     uid: ea31b6c4-818e-46c6-911b-8e5d266e7bcd
   spec:
     concurrencyPolicy: Replace
@@ -23676,8 +23676,8 @@ items:
     successfulJobsHistoryLimit: 1
     suspend: false
   status:
-    lastScheduleTime: "2026-01-08T12:30:00Z"
-    lastSuccessfulTime: "2026-01-08T12:30:05Z"
+    lastScheduleTime: "2026-01-08T13:30:00Z"
+    lastSuccessfulTime: "2026-01-08T13:30:04Z"
 - apiVersion: batch/v1
   kind: CronJob
   metadata:
@@ -23690,7 +23690,7 @@ items:
       k8slens-edit-resource-version: v1
     name: uk-emiconnect-twilio-messages
     namespace: kuepa
-    resourceVersion: "1767875405502767007"
+    resourceVersion: "1767879005190751007"
     uid: 83c65489-199b-4c3a-9731-b63fb1e0f48d
   spec:
     concurrencyPolicy: Replace
@@ -23725,8 +23725,8 @@ items:
     successfulJobsHistoryLimit: 1
     suspend: false
   status:
-    lastScheduleTime: "2026-01-08T12:30:00Z"
-    lastSuccessfulTime: "2026-01-08T12:30:05Z"
+    lastScheduleTime: "2026-01-08T13:30:00Z"
+    lastSuccessfulTime: "2026-01-08T13:30:05Z"
 - apiVersion: batch/v1
   kind: CronJob
   metadata:
