@@ -1,0 +1,21 @@
+services:
+  snapshot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gke-snapshot
+    volumes:
+      # Montar directorio de salida para los snapshots
+      - ./output:/app/output
+      # Montar credenciales de gcloud (necesita escritura para archivos temporales)
+      - ${HOME}/.config/gcloud:/root/.config/gcloud
+      # Montar kubeconfig (si existe localmente)
+      - ${HOME}/.kube:/root/.kube:ro
+    environment:
+      - PROJECT_ID=${PROJECT_ID:-kuepa-datos}
+      - CLUSTER=${CLUSTER:-kuepa-cluster}
+      - ZONE=${ZONE:-us-central1-c}
+      - OUTPUT_DIR=/app/output
+    # Ejecutar una vez y salir
+    restart: "no"
+

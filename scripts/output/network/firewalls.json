@@ -1,0 +1,567 @@
+[
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "443"
+        ]
+      }
+    ],
+    "creationTimestamp": "2025-05-21T13:27:26.741-07:00",
+    "description": "Allow Twilio WebSocket traffic",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "6964793389154011585",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": true
+    },
+    "name": "allow-twilio-websocket",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 900,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/allow-twilio-websocket",
+    "sourceRanges": [
+      "54.172.60.0/22",
+      "34.203.250.0/23"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "icmp"
+      }
+    ],
+    "creationTimestamp": "2022-05-25T07:58:02.644-07:00",
+    "description": "Allow ICMP from anywhere",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "4459289316222565653",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "default-allow-icmp",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/default-allow-icmp",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "0-65535"
+        ]
+      },
+      {
+        "IPProtocol": "udp",
+        "ports": [
+          "0-65535"
+        ]
+      },
+      {
+        "IPProtocol": "icmp"
+      }
+    ],
+    "creationTimestamp": "2022-05-25T07:58:02.579-07:00",
+    "description": "Allow internal traffic on the default network",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "1945022904322489621",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "default-allow-internal",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/default-allow-internal",
+    "sourceRanges": [
+      "10.128.0.0/9"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "3389"
+        ]
+      }
+    ],
+    "creationTimestamp": "2022-05-25T07:58:02.622-07:00",
+    "description": "Allow RDP from anywhere",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "799749155921853717",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "default-allow-rdp",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/default-allow-rdp",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "22"
+        ]
+      }
+    ],
+    "creationTimestamp": "2022-05-25T07:58:02.601-07:00",
+    "description": "Allow SSH from anywhere",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "1555338283878448405",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "default-allow-ssh",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/default-allow-ssh",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "icmp"
+      },
+      {
+        "IPProtocol": "esp"
+      },
+      {
+        "IPProtocol": "ah"
+      },
+      {
+        "IPProtocol": "sctp"
+      },
+      {
+        "IPProtocol": "tcp"
+      },
+      {
+        "IPProtocol": "udp"
+      }
+    ],
+    "creationTimestamp": "2023-03-07T07:31:03.733-08:00",
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "7382318369932502616",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "gke-kuepa-cluster-676b6082-all",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/gke-kuepa-cluster-676b6082-all",
+    "sourceRanges": [
+      "10.40.0.0/14"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "creationTimestamp": "2023-03-07T07:31:03.785-08:00",
+    "denied": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "10255"
+        ]
+      }
+    ],
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "2474869405875103320",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "gke-kuepa-cluster-676b6082-exkubelet",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/gke-kuepa-cluster-676b6082-exkubelet",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "10255"
+        ]
+      }
+    ],
+    "creationTimestamp": "2023-03-07T07:31:03.659-08:00",
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "2273248402456897112",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "gke-kuepa-cluster-676b6082-inkubelet",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 999,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/gke-kuepa-cluster-676b6082-inkubelet",
+    "sourceRanges": [
+      "10.40.0.0/14"
+    ],
+    "sourceTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "icmp"
+      },
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "1-65535"
+        ]
+      },
+      {
+        "IPProtocol": "udp",
+        "ports": [
+          "1-65535"
+        ]
+      }
+    ],
+    "creationTimestamp": "2023-03-07T07:31:03.912-08:00",
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "5574521726868055640",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "gke-kuepa-cluster-676b6082-vms",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/gke-kuepa-cluster-676b6082-vms",
+    "sourceRanges": [
+      "10.128.0.0/9"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "0-65535"
+        ]
+      }
+    ],
+    "creationTimestamp": "2023-10-06T10:08:11.564-07:00",
+    "description": "Ingress L7 firewall rule",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "8271131610989821972",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": true
+    },
+    "name": "gkegw1-70fs-l7-default-us-central1",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/gkegw1-70fs-l7-default-us-central1",
+    "sourceRanges": [
+      "130.211.0.0/22",
+      "35.191.0.0/16",
+      "10.120.0.0/20"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "10256"
+        ]
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:44:33.189-07:00",
+    "description": "{\"kubernetes.io/cluster-id\":\"06f2e71baf381854\"}",
+    "destinationRanges": [
+      "34.69.137.206"
+    ],
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "8302539748989092430",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "k8s-06f2e71baf381854-node-http-hc",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/k8s-06f2e71baf381854-node-http-hc",
+    "sourceRanges": [
+      "130.211.0.0/22",
+      "35.191.0.0/16",
+      "209.85.152.0/22",
+      "209.85.204.0/22"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "443"
+        ]
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:44:27.656-07:00",
+    "description": "{\"kubernetes.io/service-name\":\"kuepa-infra/emi-gateway-prepa-lb\", \"kubernetes.io/service-ip\":\"35.238.147.67\"}",
+    "destinationRanges": [
+      "35.238.147.67"
+    ],
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "6788718533410701940",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "k8s-fw-a943be7edf3c84e87b0d365f76bdd08d",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/k8s-fw-a943be7edf3c84e87b0d365f76bdd08d",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "80"
+        ]
+      }
+    ],
+    "creationTimestamp": "2025-06-02T15:49:42.001-07:00",
+    "description": "{\"kubernetes.io/service-name\":\"kuepa/uk-report-api-service\", \"kubernetes.io/service-ip\":\"34.29.71.240\"}",
+    "destinationRanges": [
+      "34.29.71.240"
+    ],
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "3790011503060685930",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "k8s-fw-af725401beb0844429b2770e7ceb6be4",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/k8s-fw-af725401beb0844429b2770e7ceb6be4",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "3000",
+          "8080"
+        ]
+      }
+    ],
+    "creationTimestamp": "2023-03-07T07:40:46.274-08:00",
+    "description": "GCE L7 firewall rule",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "3747400930722243601",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "k8s-fw-l7--06f2e71baf381854",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/k8s-fw-l7--06f2e71baf381854",
+    "sourceRanges": [
+      "35.191.0.0/16",
+      "130.211.0.0/22"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "udp",
+        "ports": [
+          "31820"
+        ]
+      }
+    ],
+    "creationTimestamp": "2023-12-27T18:23:44.820-08:00",
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "3973514298686268127",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "kuepa-cluster-wireguard",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/default",
+    "priority": 1000,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/kuepa-cluster-wireguard",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ],
+    "targetTags": [
+      "gke-kuepa-cluster-676b6082-node"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "all"
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:12:17.372-07:00",
+    "description": "Permite la conexión desde cualquier origen hacia cualquier instancia en la red usando protocolos personalizados.",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "6099648514609794046",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "prepa-gateway-allow-custom",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/prepagratis",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/prepa-gateway-allow-custom",
+    "sourceRanges": [
+      "10.128.0.0/9"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "icmp"
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:12:18.733-07:00",
+    "description": "Permite conexiones ICMP desde cualquier fuente para cualquier instancia en la red.",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "5444662587470793725",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "prepa-gateway-allow-icmp",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/prepagratis",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/prepa-gateway-allow-icmp",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "3389"
+        ]
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:12:20.194-07:00",
+    "description": "Permite conexiones RDP de cualquier fuente para cualquier instancia en la red mediante el puerto 3389.",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "3981659643982007291",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "prepa-gateway-allow-rdp",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/prepagratis",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/prepa-gateway-allow-rdp",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "allowed": [
+      {
+        "IPProtocol": "tcp",
+        "ports": [
+          "22"
+        ]
+      }
+    ],
+    "creationTimestamp": "2024-07-26T12:12:21.825-07:00",
+    "description": "Permite conexiones TCP de cualquier fuente para cualquier instancia en la red usando el puerto 22.",
+    "direction": "INGRESS",
+    "disabled": false,
+    "id": "7434558890333588474",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "prepa-gateway-allow-ssh",
+    "network": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/networks/prepagratis",
+    "priority": 65534,
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/kuepa-datos/global/firewalls/prepa-gateway-allow-ssh",
+    "sourceRanges": [
+      "0.0.0.0/0"
+    ]
+  }
+]

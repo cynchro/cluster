@@ -1,0 +1,7 @@
+output/
+*.json
+*.yaml
+*.yml
+.git/
+.gitignore
+

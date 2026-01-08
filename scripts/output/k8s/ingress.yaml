@@ -1,0 +1,219 @@
+apiVersion: v1
+items:
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      ingress.kubernetes.io/backends: '{"k8s1-06f2e71b-dev-lookeye-nexus-service-3000-7aaae2b2":"Unknown","k8s1-06f2e71b-kube-system-default-http-backend-80-7730afd8":"HEALTHY"}'
+      ingress.kubernetes.io/forwarding-rule: k8s2-fr-70fsc4yu-dev-nexus-ingress-wl1i3242
+      ingress.kubernetes.io/https-forwarding-rule: k8s2-fs-70fsc4yu-dev-nexus-ingress-wl1i3242
+      ingress.kubernetes.io/https-target-proxy: k8s2-ts-70fsc4yu-dev-nexus-ingress-wl1i3242
+      ingress.kubernetes.io/ssl-cert: k8s2-cr-70fsc4yu-dxxx2az73432vpya-366f7c664bd27625
+      ingress.kubernetes.io/static-ip: k8s2-fr-70fsc4yu-dev-nexus-ingress-wl1i3242
+      ingress.kubernetes.io/target-proxy: k8s2-tp-70fsc4yu-dev-nexus-ingress-wl1i3242
+      ingress.kubernetes.io/url-map: k8s2-um-70fsc4yu-dev-nexus-ingress-wl1i3242
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"name":"nexus-ingress","namespace":"dev"},"spec":{"rules":[{"host":"dev.universidaduk.com","http":{"paths":[{"backend":{"service":{"name":"lookeye-nexus-service","port":{"number":3000}}},"path":"/nexus/*","pathType":"ImplementationSpecific"}]}}],"tls":[{"secretName":"sub.universidaduk.com"}]}}
+    creationTimestamp: "2023-08-15T22:29:15Z"
+    finalizers:
+    - networking.gke.io/ingress-finalizer-V2
+    generation: 3
+    labels:
+      k8slens-edit-resource-version: v1
+    name: nexus-ingress
+    namespace: dev
+    resourceVersion: "1767721715309631013"
+    uid: b0c5550e-dcf0-458e-826f-de8577877672
+  spec:
+    rules:
+    - host: dev.universidaduk.com
+      http:
+        paths:
+        - backend:
+            service:
+              name: lookeye-nexus-service
+              port:
+                number: 3000
+          path: /nexus/twilio/message/*
+          pathType: ImplementationSpecific
+        - backend:
+            service:
+              name: lookeye-nexus-service
+              port:
+                number: 3000
+          path: /nexus/status-payment
+          pathType: ImplementationSpecific
+    tls:
+    - secretName: sub.universidaduk.com
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 35.190.49.104
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      ingress.kubernetes.io/backends: '{"k8s1-06f2e71b-kube-system-default-http-backend-80-7730afd8":"HEALTHY","k8s1-06f2e71b-kuepa-uk-chatbot-student-service-3000-e3510e65":"Unknown"}'
+      ingress.kubernetes.io/https-forwarding-rule: k8s2-fs-70fsc4yu-kuepa-client-ingress-rules-rqxn7gwm
+      ingress.kubernetes.io/https-target-proxy: k8s2-ts-70fsc4yu-kuepa-client-ingress-rules-rqxn7gwm
+      ingress.kubernetes.io/ssl-cert: k8s2-cr-70fsc4yu-c7t6pxfqepf8t5iy-366f7c664bd27625
+      ingress.kubernetes.io/static-ip: k8s2-fr-70fsc4yu-kuepa-client-ingress-rules-rqxn7gwm
+      ingress.kubernetes.io/url-map: k8s2-um-70fsc4yu-kuepa-client-ingress-rules-rqxn7gwm
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"name":"client-ingress-rules","namespace":"kuepa"},"spec":{"rules":[{"host":"chat.universidaduk.com","http":{"paths":[{"backend":{"service":{"name":"flexchat-ui","port":{"number":3000}}},"pathType":"ImplementationSpecific"}]}}],"tls":[{"secretName":"sub.universidaduk.com"}]}}
+      kubernetes.io/ingress.allow-http: "false"
+    creationTimestamp: "2023-03-07T15:40:45Z"
+    finalizers:
+    - networking.gke.io/ingress-finalizer-V2
+    generation: 16
+    labels:
+      k8slens-edit-resource-version: v1
+    name: client-ingress-rules
+    namespace: kuepa
+    resourceVersion: "1767722915411023002"
+    uid: d4953bc6-ccef-4e16-a54f-1e2064c632ed
+  spec:
+    rules:
+    - host: chat.universidaduk.com
+      http:
+        paths:
+        - backend:
+            service:
+              name: uk-chatbot-student-service
+              port:
+                number: 3000
+          path: /chatbot-student/message
+          pathType: ImplementationSpecific
+    tls:
+    - secretName: sub.universidaduk.com
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.149.97.24
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      ingress.kubernetes.io/backends: '{"k8s1-06f2e71b-kube-system-default-http-backend-80-7730afd8":"HEALTHY","k8s1-06f2e71b-kuepa-uk-chatbot-3000-8524e198":"Unknown"}'
+      ingress.kubernetes.io/https-forwarding-rule: k8s2-fs-70fsc4yu-kuepa-uk-chatbot-ingress-ybhd2wk4
+      ingress.kubernetes.io/https-target-proxy: k8s2-ts-70fsc4yu-kuepa-uk-chatbot-ingress-ybhd2wk4
+      ingress.kubernetes.io/ssl-cert: k8s2-cr-70fsc4yu-gpjkfg08zsynj4vd-366f7c664bd27625
+      ingress.kubernetes.io/url-map: k8s2-um-70fsc4yu-kuepa-uk-chatbot-ingress-ybhd2wk4
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{},"name":"uk-chatbot-ingress","namespace":"kuepa"},"spec":{"rules":[{"host":"chatbot.universidaduk.com","http":{"paths":[{"backend":{"service":{"name":"uk-chatbot","port":{"number":3000}}},"path":"/(*.)","pathType":"ImplementationSpecific"}]}}],"tls":[{"secretName":"sub.universidaduk.com"}]}}
+      kubernetes.io/ingress.allow-http: "false"
+    creationTimestamp: "2023-04-19T22:47:43Z"
+    finalizers:
+    - networking.gke.io/ingress-finalizer-V2
+    generation: 4
+    labels:
+      k8slens-edit-resource-version: v1
+    name: uk-chatbot-ingress
+    namespace: kuepa
+    resourceVersion: "674864061"
+    uid: 9402ee6c-d478-4d94-8c5e-a98ad61a7ee1
+  spec:
+    rules:
+    - host: chatbot.universidaduk.com
+      http:
+        paths:
+        - backend:
+            service:
+              name: uk-chatbot
+              port:
+                number: 3000
+          path: /*
+          pathType: ImplementationSpecific
+    tls:
+    - secretName: sub.universidaduk.com
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.110.150.113
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"kubernetes.io/ingress.class":"nginx","nginx.ingress.kubernetes.io/proxy-body-size":"100m"},"name":"uk-course-gen-api-ingress","namespace":"kuepa"},"spec":{"rules":[{"host":"uk-course-gen-api.kuepa.io","http":{"paths":[{"backend":{"service":{"name":"uk-course-gen-api","port":{"number":3000}}},"path":"/","pathType":"Prefix"}]}}]}}
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    creationTimestamp: "2025-05-09T22:03:44Z"
+    generation: 1
+    name: uk-course-gen-api-ingress
+    namespace: kuepa
+    resourceVersion: "693653525"
+    uid: fa63068e-8f4b-40ea-b9e0-53535e07ddf2
+  spec:
+    rules:
+    - host: uk-course-gen-api.kuepa.io
+      http:
+        paths:
+        - backend:
+            service:
+              name: uk-course-gen-api
+              port:
+                number: 3000
+          path: /
+          pathType: Prefix
+  status:
+    loadBalancer: {}
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"kubernetes.io/ingress.class":"nginx","nginx.ingress.kubernetes.io/proxy-body-size":"100m"},"name":"uk-course-gen-ingress","namespace":"kuepa"},"spec":{"rules":[{"host":"uk-course-gen.kuepa.io","http":{"paths":[{"backend":{"service":{"name":"uk-course-gen","port":{"number":3000}}},"path":"/","pathType":"Prefix"}]}}]}}
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    creationTimestamp: "2025-05-08T23:21:14Z"
+    generation: 1
+    name: uk-course-gen-ingress
+    namespace: kuepa
+    resourceVersion: "692648756"
+    uid: 09cb643d-c379-4436-9d86-42dd1cd0eeff
+  spec:
+    rules:
+    - host: uk-course-gen.kuepa.io
+      http:
+        paths:
+        - backend:
+            service:
+              name: uk-course-gen
+              port:
+                number: 3000
+          path: /
+          pathType: Prefix
+  status:
+    loadBalancer: {}
+- apiVersion: networking.k8s.io/v1
+  kind: Ingress
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"kubernetes.io/ingress.class":"nginx","nginx.ingress.kubernetes.io/proxy-body-size":"100m"},"name":"uk-course-gen-nest-api-ingress","namespace":"kuepa"},"spec":{"rules":[{"host":"uk-course-gen-nest.kuepa.io","http":{"paths":[{"backend":{"service":{"name":"uk-course-gen-nest-api","port":{"number":3000}}},"path":"/","pathType":"Prefix"}]}}]}}
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    creationTimestamp: "2025-05-09T22:01:33Z"
+    generation: 1
+    name: uk-course-gen-nest-api-ingress
+    namespace: kuepa
+    resourceVersion: "693651899"
+    uid: 08f49288-d5e4-419c-b19c-f4fb36bfdafa
+  spec:
+    rules:
+    - host: uk-course-gen-nest.kuepa.io
+      http:
+        paths:
+        - backend:
+            service:
+              name: uk-course-gen-nest-api
+              port:
+                number: 3000
+          path: /
+          pathType: Prefix
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,618 @@
+{
+  "auditConfigs": [
+    {
+      "auditLogConfigs": [
+        {
+          "logType": "ADMIN_READ"
+        },
+        {
+          "logType": "DATA_READ"
+        },
+        {
+          "logType": "DATA_WRITE"
+        }
+      ],
+      "service": "analyticshub.googleapis.com"
+    },
+    {
+      "auditLogConfigs": [
+        {
+          "logType": "ADMIN_READ"
+        },
+        {
+          "logType": "DATA_READ"
+        },
+        {
+          "logType": "DATA_WRITE"
+        }
+      ],
+      "service": "bigquerydatapolicy.googleapis.com"
+    },
+    {
+      "auditLogConfigs": [
+        {
+          "logType": "ADMIN_READ"
+        },
+        {
+          "logType": "DATA_READ"
+        },
+        {
+          "logType": "DATA_WRITE"
+        }
+      ],
+      "service": "bigquerymigration.googleapis.com"
+    }
+  ],
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:bigquery@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "projects/kuepa-datos/roles/cloudtaskrest"
+    },
+    {
+      "members": [
+        "serviceAccount:vertex-ai-integration@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:vertex-ia-diego@kuepa-datos.iam.gserviceaccount.com",
+        "user:diego.bisego@kuepa.com"
+      ],
+      "role": "roles/aiplatform.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-vertex-nb.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.colabServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-aiplatform-cc.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.customCodeServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:vertex-express@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.expressUser"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-aiplatform-vm.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.notebookServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-aiplatform.iam.gserviceaccount.com"
+      ],
+      "role": "roles/aiplatform.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/appengine.appAdmin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-gae-service.iam.gserviceaccount.com"
+      ],
+      "role": "roles/appengine.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:testing-github-actions@kuepa-datos.iam.gserviceaccount.com",
+        "user:valentin.marchessi@kuepa.com"
+      ],
+      "role": "roles/artifactregistry.writer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-automl.iam.gserviceaccount.com"
+      ],
+      "role": "roles/automl.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:bigquery@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:content-script@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-emi-classroom@kuepa-datos.iam.gserviceaccount.com",
+        "user:diana.salinas@kuepa.com",
+        "user:joaquin.sanz@kuepa.com",
+        "user:simon.basilio@kuepa.com"
+      ],
+      "role": "roles/bigquery.admin"
+    },
+    {
+      "members": [
+        "user:simon.basilio@kuepa.com"
+      ],
+      "role": "roles/bigquery.dataOwner"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-bigquerydatatransfer.iam.gserviceaccount.com"
+      ],
+      "role": "roles/bigquerydatatransfer.serviceAgent"
+    },
+    {
+      "members": [
+        "user:lucas.maza@kuepa.com"
+      ],
+      "role": "roles/billing.projectManager"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-cloudaicompanion.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudaicompanion.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.builds.builder"
+    },
+    {
+      "members": [
+        "user:diana.salinas@kuepa.com"
+      ],
+      "role": "roles/cloudbuild.builds.viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcf-admin-robot.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudfunctions.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-cloudscheduler.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudscheduler.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-cloudtasks.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudtasks.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:leadhub-cloudstorage-test@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/composer.environmentAndStorageObjectViewer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@compute-system.iam.gserviceaccount.com"
+      ],
+      "role": "roles/compute.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-gkenode.iam.gserviceaccount.com"
+      ],
+      "role": "roles/container.defaultNodeServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:testing-github-actions@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/container.developer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@container-engine-robot.iam.gserviceaccount.com"
+      ],
+      "role": "roles/container.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@container-analysis.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containeranalysis.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@containerregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containerregistry.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@dataflow-service-producer-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dataflow.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-dataform.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dataform.serviceAgent"
+    },
+    {
+      "members": [
+        "user:diana.salinas@kuepa.com"
+      ],
+      "role": "roles/datastudio.viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-app-hosting-compute@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/developerconnect.readTokenAccessor"
+    },
+    {
+      "members": [
+        "serviceAccount:twilio-conversations-dialogflo@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:virtualagent-ccai-prod@dialogflow-prod-env.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.client"
+    },
+    {
+      "members": [
+        "serviceAccount:twilio-conversations-dialogflo@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.conversationManager"
+    },
+    {
+      "members": [
+        "serviceAccount:one-click@df-cx-tw-7b841ee2c5e8175e.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.oneClickIntegrationAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:virtualagent-ccai-prod@dialogflow-prod-env.iam.gserviceaccount.com",
+        "user:gonzalo.pulit@kuepa.com"
+      ],
+      "role": "roles/dialogflow.reader"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-dialogflow.iam.gserviceaccount.com",
+        "serviceAccount:twilio-conversations-dialogflo@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:twilio-conversations-dialogflo@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/dialogflow.webhookAdmin"
+    },
+    {
+      "members": [
+        "user:gonzalo.pulit@kuepa.com",
+        "user:ivan.cantu@kuepa.com"
+      ],
+      "role": "roles/discoveryengine.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-discoveryengine.iam.gserviceaccount.com"
+      ],
+      "role": "roles/discoveryengine.serviceAgent"
+    },
+    {
+      "members": [
+        "user:david.silva@kuepa.com"
+      ],
+      "role": "roles/discoveryengine.user"
+    },
+    {
+      "members": [
+        "serviceAccount:vertex-ia-diego@kuepa-datos.iam.gserviceaccount.com",
+        "user:diego.bisego@kuepa.com"
+      ],
+      "role": "roles/documentai.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-prod-dai-core.iam.gserviceaccount.com"
+      ],
+      "role": "roles/documentaicore.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201-compute@developer.gserviceaccount.com",
+        "serviceAccount:1561735201@cloudservices.gserviceaccount.com",
+        "serviceAccount:gapps-reports@system.gserviceaccount.com",
+        "serviceAccount:kuepa-datos@appspot.gserviceaccount.com",
+        "serviceAccount:kuepa-mx@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:twilio-recording@kuepa-datos.iam.gserviceaccount.com",
+        "user:agustin.velazquez@kuepa.com",
+        "user:alexis.saucedo@kuepa.com",
+        "user:diana.salinas@kuepa.com",
+        "user:facundo.fuentes@kuepa.com",
+        "user:franco.troncoso@kuepa.com",
+        "user:gonzalo.diaz@kuepa.com",
+        "user:gonzalo.pulit@kuepa.com",
+        "user:jeronimo.donato@kuepa.com",
+        "user:juan.quiroga@kuepa.com",
+        "user:renzo.fajardo@kuepa.com",
+        "user:simon.basilio@kuepa.com",
+        "user:valentin.marchessi@kuepa.com"
+      ],
+      "role": "roles/editor"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201-compute@developer.gserviceaccount.com"
+      ],
+      "role": "roles/eventarc.eventReceiver"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com",
+        "serviceAccount:service-1561735201@gcp-sa-firebase.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.managementServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-p3209@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:firebase-app-hosting-compute@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebase.sdkAdminServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-app-hosting-compute@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaseapphosting.computeRunner"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-firebaseapphosting.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaseapphosting.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-firebasemods.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebasemods.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@firebase-rules.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebaserules.system"
+    },
+    {
+      "members": [
+        "serviceAccount:twilio-recording@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firebasestorage.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-firestore.iam.gserviceaccount.com"
+      ],
+      "role": "roles/firestore.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-gkebackup.iam.gserviceaccount.com"
+      ],
+      "role": "roles/gkebackup.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-gkehub.iam.gserviceaccount.com"
+      ],
+      "role": "roles/gkehub.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-adminsdk-p3209@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:kuepa-mx@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:service-1561735201@gcp-sa-pubsub.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountTokenCreator"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-notebooks.iam.gserviceaccount.com"
+      ],
+      "role": "roles/notebooks.serviceAgent"
+    },
+    {
+      "members": [
+        "user:ivan.cantu@kuepa.com"
+      ],
+      "role": "roles/orgpolicy.policyViewer"
+    },
+    {
+      "members": [
+        "user:agustin.velazquez@kuepa.com",
+        "user:alexis.saucedo@kuepa.com",
+        "user:ariel.reyes@kuepa.com",
+        "user:diego.bisego@kuepa.com",
+        "user:dirk@edvolution.io",
+        "user:facundo.fuentes@kuepa.com",
+        "user:franco.troncoso@kuepa.com",
+        "user:gonzalo.diaz@kuepa.com",
+        "user:ivan.cantu@kuepa.com",
+        "user:ivan.cantu@ukuepa.com",
+        "user:jeronimo.donato@kuepa.com",
+        "user:juan.lebrero@kuepa.com",
+        "user:juan.quiroga@kuepa.com",
+        "user:lucas.maza@kuepa.com",
+        "user:profesor.pruebas@ukuepa.com",
+        "user:renzo.fajardo@kuepa.com",
+        "user:simon.basilio@kuepa.com",
+        "user:valentin.marchessi@kuepa.com"
+      ],
+      "role": "roles/owner"
+    },
+    {
+      "members": [
+        "serviceAccount:pubsub-flexchat@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/pubsub.admin"
+    },
+    {
+      "members": [
+        "user:ventas2.callcenter@kuepa.com"
+      ],
+      "role": "roles/resourcemanager.projectOwnerInvitee"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/run.builder"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201-compute@developer.gserviceaccount.com"
+      ],
+      "role": "roles/run.invoker"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@serverless-robot-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:1561735201@cloudbuild.gserviceaccount.com",
+        "serviceAccount:workload-identity-sa@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/secretmanager.secretAccessor"
+    },
+    {
+      "members": [
+        "serviceAccount:email-creation-migration@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/servicedirectory.admin"
+    },
+    {
+      "members": [
+        "user:diego.bisego@kuepa.com",
+        "user:lucas.maza@kuepa.com"
+      ],
+      "role": "roles/serviceusage.serviceUsageAdmin"
+    },
+    {
+      "members": [
+        "user:lucas.maza@kuepa.com"
+      ],
+      "role": "roles/serviceusage.serviceUsageConsumer"
+    },
+    {
+      "members": [
+        "group:labs-admin@edvolution.io",
+        "serviceAccount:bigquery@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:kuepa-mx@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-emi-classroom@kuepa-datos.iam.gserviceaccount.com",
+        "user:diana.salinas@kuepa.com"
+      ],
+      "role": "roles/spanner.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:content-script@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:kuepa-mx@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-platform-storage@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/spanner.databaseAdmin"
+    },
+    {
+      "members": [
+        "serviceAccount:kuepa-mx@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-platform-storage@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/spanner.databaseUser"
+    },
+    {
+      "members": [
+        "serviceAccount:uk-emidrive@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/spanner.viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:speech-text-test@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:speech-to-text-service@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-luzbelito@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/speech.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-speech.iam.gserviceaccount.com"
+      ],
+      "role": "roles/speech.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:leadhub-cloudstorage-test@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:twilio-recording@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-luzbelito@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:content-script@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:speech-to-text-service@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-platform-storage@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:upload-content@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.objectAdmin"
+    },
+    {
+      "members": [
+        "serviceAccount:uk-luzbelito@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-platform-storage@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.objectCreator"
+    },
+    {
+      "members": [
+        "serviceAccount:firebase-app-hosting-compute@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:service-1561735201@gcp-sa-artifactregistry.iam.gserviceaccount.com",
+        "serviceAccount:uk-luzbelito@kuepa-datos.iam.gserviceaccount.com",
+        "serviceAccount:uk-platform-storage@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.objectViewer"
+    },
+    {
+      "members": [
+        "serviceAccount:leadhub-cloudstorage-test@kuepa-datos.iam.gserviceaccount.com"
+      ],
+      "role": "roles/viewer"
+    },
+    {
+      "members": [
+        "serviceAccount:service-1561735201@gcp-sa-visionai.iam.gserviceaccount.com"
+      ],
+      "role": "roles/visionai.serviceAgent"
+    }
+  ],
+  "etag": "BwZFim17A2o=",
+  "version": 1
+}

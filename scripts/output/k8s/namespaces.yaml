@@ -1,0 +1,146 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:34:07Z"
+    labels:
+      kubernetes.io/metadata.name: default
+    name: default
+    resourceVersion: "190"
+    uid: 472d8aef-299b-4371-9ea7-1addb8beaecb
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:40:06Z"
+    labels:
+      k8slens-edit-resource-version: v1
+      kubernetes.io/metadata.name: dev
+      shared-gateway-access: "true"
+    name: dev
+    resourceVersion: "163033918"
+    uid: 8c48aafa-2ea3-4972-b795-b50010a1e7a6
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      components.gke.io/component-name: gke-managed-system
+      components.gke.io/component-version: 0.1.1
+      components.gke.io/layer: addon
+    creationTimestamp: "2024-07-25T01:39:28Z"
+    labels:
+      addonmanager.kubernetes.io/mode: Reconcile
+      kubernetes.io/metadata.name: gke-managed-system
+    name: gke-managed-system
+    resourceVersion: "405018598"
+    uid: 5a1cba03-0857-4f06-b362-a268f7cac3a6
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    annotations:
+      components.gke.io/component-name: gke-volume-populator
+      components.gke.io/component-version: 0.3.6
+      components.gke.io/layer: addon
+    creationTimestamp: "2025-05-01T03:52:49Z"
+    labels:
+      addonmanager.kubernetes.io/mode: Reconcile
+      k8s-app: gke-volume-populator
+      kubernetes.io/metadata.name: gke-managed-volumepopulator
+    name: gke-managed-volumepopulator
+    resourceVersion: "1760817480313791022"
+    uid: fc85ecbb-ebfa-446c-909b-7c6f0b77e848
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:34:00Z"
+    labels:
+      kubernetes.io/metadata.name: kube-node-lease
+    name: kube-node-lease
+    resourceVersion: "38"
+    uid: a9e2bf52-5044-4309-84f9-8999c9449ddf
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:34:00Z"
+    labels:
+      kubernetes.io/metadata.name: kube-public
+    name: kube-public
+    resourceVersion: "26"
+    uid: 39bad3d4-cf95-47f5-ba46-09403fb0bb6b
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:34:00Z"
+    labels:
+      kubernetes.io/metadata.name: kube-system
+    name: kube-system
+    resourceVersion: "12"
+    uid: 6d2a1fa6-ad9e-41f6-a2cb-1d48d2a21b6a
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-03-07T15:39:39Z"
+    labels:
+      k8slens-edit-resource-version: v1
+      kubernetes.io/metadata.name: kuepa
+      shared-gateway-access: "true"
+    name: kuepa
+    resourceVersion: "163033793"
+    uid: 3be6950c-3ce0-4a09-beb5-ec82e8e0ccfb
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    creationTimestamp: "2023-10-06T15:28:57Z"
+    labels:
+      kubernetes.io/metadata.name: kuepa-infra
+    name: kuepa-infra
+    resourceVersion: "162980614"
+    uid: 5be22261-c4f1-40fd-ad01-57bba8f3d410
+  spec:
+    finalizers:
+    - kubernetes
+  status:
+    phase: Active
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,1049 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"mongodb","namespace":"dev"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"8Gi"}},"storageClassName":"standard-rwo"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+    creationTimestamp: "2024-09-30T00:37:53Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      k8slens-edit-resource-version: v1
+    name: mongodb
+    namespace: dev
+    resourceVersion: "472669668"
+    uid: e6f1cefe-c19f-4a15-8e38-9898345633a3
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 16Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-5e1db9b4-f6f7-4e5c-92e5-5bd28f951feb
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 16Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-vpmk
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-07-07T16:20:10Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: redis-dev
+      app.kubernetes.io/name: redis
+    name: redis-data-redis-dev-master-0
+    namespace: dev
+    resourceVersion: "755889632"
+    uid: de732c77-3639-4f56-943d-1b91c99d755d
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 8Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-de732c77-3639-4f56-943d-1b91c99d755d
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-vpmk
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-07-07T16:20:14Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: redis-dev
+      app.kubernetes.io/name: redis
+    name: redis-data-redis-dev-replicas-0
+    namespace: dev
+    resourceVersion: "755889696"
+    uid: 6d6bb972-c573-4130-b8cc-bb748477767d
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 8Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-6d6bb972-c573-4130-b8cc-bb748477767d
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-qlll
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2023-12-27T19:50:25Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: primary
+      app.kubernetes.io/instance: langfuse-pgsql
+      app.kubernetes.io/name: postgresql
+      k8slens-edit-resource-version: v1
+    name: data-langfuse-pgsql-postgresql-0
+    namespace: kuepa-infra
+    resourceVersion: "333156154"
+    uid: dc56dd05-3529-4908-b3d4-1807d2038105
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 200Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-dc56dd05-3529-4908-b3d4-1807d2038105
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 200Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"PersistentVolumeClaim","metadata":{"annotations":{},"name":"pv-claim-wireguard","namespace":"kuepa-infra"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"10M"}},"storageClassName":"standard"}}
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2023-12-27T21:13:41Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    name: pv-claim-wireguard
+    namespace: kuepa-infra
+    resourceVersion: "225269368"
+    uid: 3f15b994-3ca9-4a34-873e-214d7e53e35c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 10M
+    storageClassName: standard
+    volumeMode: Filesystem
+    volumeName: pvc-3f15b994-3ca9-4a34-873e-214d7e53e35c
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: mongodb-emi
+      meta.helm.sh/release-namespace: kuepa
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-5dtb
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2023-03-07T17:44:15Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: mongodb
+      app.kubernetes.io/instance: mongodb-emi
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: mongodb
+      helm.sh/chart: mongodb-13.8.2
+    name: mongodb-emi
+    namespace: kuepa
+    resourceVersion: "73869"
+    uid: 930c1354-8a78-43b3-8761-1426dcc52779
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 8Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-930c1354-8a78-43b3-8761-1426dcc52779
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-no9d
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-10-04T16:30:31Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: leadhub-campaign-redis
+      app.kubernetes.io/name: leadhub-campaign-redis
+    name: redis-data-leadhub-campaign-redis-0
+    namespace: kuepa
+    resourceVersion: "1759595435741343013"
+    uid: b976c103-a5d8-4aa1-a384-32dec7a9fb36
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 20Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-b976c103-a5d8-4aa1-a384-32dec7a9fb36
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-wygi
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-10-04T16:22:20Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: leadhub-redis
+      app.kubernetes.io/name: leadhub-redis
+    name: redis-data-leadhub-redis-master-0
+    namespace: kuepa
+    resourceVersion: "1759594944844367007"
+    uid: bb5a2df9-3df2-4ba8-b33c-52ec71dc8c07
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 20Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-bb5a2df9-3df2-4ba8-b33c-52ec71dc8c07
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-4jci
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-10-04T16:22:24Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: leadhub-redis
+      app.kubernetes.io/name: leadhub-redis
+    name: redis-data-leadhub-redis-replica-0
+    namespace: kuepa
+    resourceVersion: "1759594948141855000"
+    uid: cb2d042f-1b92-4af3-93a8-c3db612f4a47
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 20Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-cb2d042f-1b92-4af3-93a8-c3db612f4a47
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-b7hb
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-12-14T23:15:28Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: redis
+      app.kubernetes.io/name: redis
+    name: redis-data-redis-master-0
+    namespace: kuepa
+    resourceVersion: "1767631485136703006"
+    uid: ece77ce4-5da5-4f3b-991c-0555caaeb521
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 30Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-ece77ce4-5da5-4f3b-991c-0555caaeb521
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 30Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-b7hb
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-12-14T23:15:31Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: redis
+      app.kubernetes.io/name: redis
+    name: redis-data-redis-replicas-0
+    namespace: kuepa
+    resourceVersion: "1767631483690015020"
+    uid: 7bf8537d-9f15-4114-b9d1-430b0ce1dd19
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 30Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-7bf8537d-9f15-4114-b9d1-430b0ce1dd19
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 30Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolumeClaim
+  metadata:
+    annotations:
+      pv.kubernetes.io/bind-completed: "yes"
+      pv.kubernetes.io/bound-by-controller: "yes"
+      volume.beta.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+      volume.kubernetes.io/selected-node: gke-kuepa-cluster-kuepa-pool-bac864a9-r7xy
+      volume.kubernetes.io/storage-provisioner: pd.csi.storage.gke.io
+    creationTimestamp: "2025-05-14T19:09:45Z"
+    finalizers:
+    - kubernetes.io/pvc-protection
+    labels:
+      app: uk-care-redis
+    name: redis-data-uk-care-redis-0
+    namespace: kuepa
+    resourceVersion: "698814897"
+    uid: 0e4c04de-d70e-465c-811d-17a86160a1fa
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 2Gi
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+    volumeName: pvc-0e4c04de-d70e-465c-811d-17a86160a1fa
+  status:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-05-14T19:09:49Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    name: pvc-0e4c04de-d70e-465c-811d-17a86160a1fa
+    resourceVersion: "775048754"
+    uid: 96f0dd31-1b04-409b-ab6e-cddc22b91fa2
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 2Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-uk-care-redis-0
+      namespace: kuepa
+      resourceVersion: "698814823"
+      uid: 0e4c04de-d70e-465c-811d-17a86160a1fa
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1746071263870-4535-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-0e4c04de-d70e-465c-811d-17a86160a1fa
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-05-14T19:09:49Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/migrated-to: pd.csi.storage.gke.io
+      pv.kubernetes.io/provisioned-by: kubernetes.io/gce-pd
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2023-12-27T21:13:43Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    labels:
+      topology.kubernetes.io/region: us-central1
+      topology.kubernetes.io/zone: us-central1-c
+    name: pvc-3f15b994-3ca9-4a34-873e-214d7e53e35c
+    resourceVersion: "775048751"
+    uid: 2b1c2d90-81be-4316-86ac-2fe22f2d5298
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 1Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: pv-claim-wireguard
+      namespace: kuepa-infra
+      resourceVersion: "225269343"
+      uid: 3f15b994-3ca9-4a34-873e-214d7e53e35c
+    gcePersistentDisk:
+      fsType: ext4
+      pdName: pvc-3f15b994-3ca9-4a34-873e-214d7e53e35c
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.kubernetes.io/zone
+            operator: In
+            values:
+            - us-central1-c
+          - key: topology.kubernetes.io/region
+            operator: In
+            values:
+            - us-central1
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/bound-by-controller: "yes"
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2023-08-15T21:48:10Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    labels:
+      k8slens-edit-resource-version: v1
+    name: pvc-5e1db9b4-f6f7-4e5c-92e5-5bd28f951feb
+    resourceVersion: "482550365"
+    uid: 4d7191c4-9a01-477c-aead-2c88fcd3ca81
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 16Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: mongodb
+      namespace: dev
+      resourceVersion: "472658385"
+      uid: e6f1cefe-c19f-4a15-8e38-9898345633a3
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1691790848086-5001-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-5e1db9b4-f6f7-4e5c-92e5-5bd28f951feb
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Retain
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2024-09-30T00:43:28Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-07-07T16:20:17Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    name: pvc-6d6bb972-c573-4130-b8cc-bb748477767d
+    resourceVersion: "775048748"
+    uid: 677219f3-6e5a-4fd1-9ca5-28fc549ef38f
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-redis-dev-replicas-0
+      namespace: dev
+      resourceVersion: "755889627"
+      uid: 6d6bb972-c573-4130-b8cc-bb748477767d
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1750699331369-7218-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-6d6bb972-c573-4130-b8cc-bb748477767d
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-07-07T16:20:17Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-12-14T23:15:35Z"
+    finalizers:
+    - external-provisioner.volume.kubernetes.io/finalizer
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    name: pvc-7bf8537d-9f15-4114-b9d1-430b0ce1dd19
+    resourceVersion: "1767631479521295012"
+    uid: 4b1189e1-4689-4a60-a1a2-45f05e760b7c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 30Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-redis-replicas-0
+      namespace: kuepa
+      resourceVersion: "1765754131648143020"
+      uid: 7bf8537d-9f15-4114-b9d1-430b0ce1dd19
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1765126451421-1925-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-7bf8537d-9f15-4114-b9d1-430b0ce1dd19
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-12-14T23:15:35Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2023-03-07T17:44:21Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    name: pvc-930c1354-8a78-43b3-8761-1426dcc52779
+    resourceVersion: "775048752"
+    uid: 3934aa3d-26c2-469d-b897-5b04abd5f61f
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: mongodb-emi
+      namespace: kuepa
+      resourceVersion: "73821"
+      uid: 930c1354-8a78-43b3-8761-1426dcc52779
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1678203296963-8081-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-930c1354-8a78-43b3-8761-1426dcc52779
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-10-04T16:30:35Z"
+    finalizers:
+    - external-provisioner.volume.kubernetes.io/finalizer
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    name: pvc-b976c103-a5d8-4aa1-a384-32dec7a9fb36
+    resourceVersion: "1759595436091743023"
+    uid: 94d133ae-db78-40e7-bcbd-6c2ebef7ae8a
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-leadhub-campaign-redis-0
+      namespace: kuepa
+      resourceVersion: "1759595431975503013"
+      uid: b976c103-a5d8-4aa1-a384-32dec7a9fb36
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1759583206539-1965-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-b976c103-a5d8-4aa1-a384-32dec7a9fb36
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-10-04T16:30:35Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-10-04T16:22:24Z"
+    finalizers:
+    - external-provisioner.volume.kubernetes.io/finalizer
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    name: pvc-bb5a2df9-3df2-4ba8-b33c-52ec71dc8c07
+    resourceVersion: "1759594945280863012"
+    uid: 3bef8b47-386a-4eb8-921d-4e9c02cffb76
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-leadhub-redis-master-0
+      namespace: kuepa
+      resourceVersion: "1759594941099647007"
+      uid: bb5a2df9-3df2-4ba8-b33c-52ec71dc8c07
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1759583206539-1965-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-bb5a2df9-3df2-4ba8-b33c-52ec71dc8c07
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-10-04T16:22:24Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-10-04T16:22:28Z"
+    finalizers:
+    - external-provisioner.volume.kubernetes.io/finalizer
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    name: pvc-cb2d042f-1b92-4af3-93a8-c3db612f4a47
+    resourceVersion: "1759594948511135008"
+    uid: 86810dc2-fa58-475d-addb-3b16eaa8fe9c
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 20Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-leadhub-redis-replica-0
+      namespace: kuepa
+      resourceVersion: "1759594944374959000"
+      uid: cb2d042f-1b92-4af3-93a8-c3db612f4a47
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1759583206539-1965-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-cb2d042f-1b92-4af3-93a8-c3db612f4a47
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-10-04T16:22:28Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2023-12-27T19:50:27Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    labels:
+      k8slens-edit-resource-version: v1
+    name: pvc-dc56dd05-3529-4908-b3d4-1807d2038105
+    resourceVersion: "775048750"
+    uid: 993e98e2-2d5b-440b-a4dc-53cb590863ce
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 200Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: data-langfuse-pgsql-postgresql-0
+      namespace: kuepa-infra
+      resourceVersion: "225223574"
+      uid: dc56dd05-3529-4908-b3d4-1807d2038105
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1699647888015-6522-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-dc56dd05-3529-4908-b3d4-1807d2038105
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-07-07T16:20:14Z"
+    finalizers:
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    - external-provisioner.volume.kubernetes.io/finalizer
+    name: pvc-de732c77-3639-4f56-943d-1b91c99d755d
+    resourceVersion: "775048749"
+    uid: 4242f9b7-e313-4386-9cf8-59bc934ecdb1
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 8Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-redis-dev-master-0
+      namespace: dev
+      resourceVersion: "755889570"
+      uid: de732c77-3639-4f56-943d-1b91c99d755d
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1750699331369-7218-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-de732c77-3639-4f56-943d-1b91c99d755d
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-07-07T16:20:14Z"
+    phase: Bound
+- apiVersion: v1
+  kind: PersistentVolume
+  metadata:
+    annotations:
+      pv.kubernetes.io/provisioned-by: pd.csi.storage.gke.io
+      volume.kubernetes.io/provisioner-deletion-secret-name: ""
+      volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+    creationTimestamp: "2025-12-14T23:15:32Z"
+    finalizers:
+    - external-provisioner.volume.kubernetes.io/finalizer
+    - kubernetes.io/pv-protection
+    - external-attacher/pd-csi-storage-gke-io
+    name: pvc-ece77ce4-5da5-4f3b-991c-0555caaeb521
+    resourceVersion: "1767631472171455012"
+    uid: 3297c2b1-b330-4daa-a837-ce37f9bf3e67
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    capacity:
+      storage: 30Gi
+    claimRef:
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      name: redis-data-redis-master-0
+      namespace: kuepa
+      resourceVersion: "1765754128897599006"
+      uid: ece77ce4-5da5-4f3b-991c-0555caaeb521
+    csi:
+      driver: pd.csi.storage.gke.io
+      fsType: ext4
+      volumeAttributes:
+        storage.kubernetes.io/csiProvisionerIdentity: 1765126451421-1925-pd.csi.storage.gke.io
+      volumeHandle: projects/kuepa-datos/zones/us-central1-c/disks/pvc-ece77ce4-5da5-4f3b-991c-0555caaeb521
+    nodeAffinity:
+      required:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: topology.gke.io/zone
+            operator: In
+            values:
+            - us-central1-c
+    persistentVolumeReclaimPolicy: Delete
+    storageClassName: standard-rwo
+    volumeMode: Filesystem
+  status:
+    lastPhaseTransitionTime: "2025-12-14T23:15:32Z"
+    phase: Bound
+- allowVolumeExpansion: true
+  apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  metadata:
+    annotations:
+      components.gke.io/component-name: pdcsi
+      components.gke.io/component-version: 0.14.3
+      components.gke.io/layer: addon
+    creationTimestamp: "2023-03-07T15:35:19Z"
+    labels:
+      addonmanager.kubernetes.io/mode: EnsureExists
+      k8s-app: gcp-compute-persistent-disk-csi-driver
+    name: premium-rwo
+    resourceVersion: "662"
+    uid: db29431d-f0ac-4c3c-91bd-2c4bf536146f
+  parameters:
+    type: pd-ssd
+  provisioner: pd.csi.storage.gke.io
+  reclaimPolicy: Delete
+  volumeBindingMode: WaitForFirstConsumer
+- allowVolumeExpansion: true
+  apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  metadata:
+    annotations:
+      components.gke.io/layer: addon
+      storageclass.kubernetes.io/is-default-class: "false"
+    creationTimestamp: "2023-03-07T15:35:20Z"
+    labels:
+      addonmanager.kubernetes.io/mode: EnsureExists
+    name: standard
+    resourceVersion: "678"
+    uid: 05762fe5-b250-4277-a879-0bd88958c891
+  parameters:
+    type: pd-standard
+  provisioner: kubernetes.io/gce-pd
+  reclaimPolicy: Delete
+  volumeBindingMode: Immediate
+- allowVolumeExpansion: true
+  apiVersion: storage.k8s.io/v1
+  kind: StorageClass
+  metadata:
+    annotations:
+      components.gke.io/layer: addon
+      storageclass.kubernetes.io/is-default-class: "true"
+    creationTimestamp: "2023-03-07T15:35:20Z"
+    labels:
+      addonmanager.kubernetes.io/mode: EnsureExists
+      k8s-app: gcp-compute-persistent-disk-csi-driver
+    name: standard-rwo
+    resourceVersion: "674"
+    uid: 6ac7285c-5677-47ce-8c5d-4e855e789ac0
+  parameters:
+    type: pd-balanced
+  provisioner: pd.csi.storage.gke.io
+  reclaimPolicy: Delete
+  volumeBindingMode: WaitForFirstConsumer
+kind: List
+metadata:
+  resourceVersion: ""
