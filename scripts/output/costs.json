@@ -1,0 +1,21 @@
+{
+  "project_id": "kuepa-datos",
+  "billing_account": "0131ED-143AF7-B895E8",
+  "estimated_monthly": {
+    "compute": 600.43,
+    "storage": 61.54,
+    "total": 661.97
+  },
+  "node_pools": [
+    {
+      "name": "kuepa-pool",
+      "machine_type": "e2-standard-4",
+      "avg_nodes": 3.5,
+      "monthly_cost": 600.43
+    }
+  ],
+  "storage_gb": 362.0,
+  "currency": "USD",
+  "last_updated": "2026-01-08T13:38:21.699612",
+  "note": "Costos estimados basados en recursos. Los costos reales pueden variar."
+}

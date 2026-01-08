@@ -140,7 +140,37 @@ with open(OUT, "w") as f:
     f.write("|---|---|---|---|\n")
     f.write("\n".join(stor_rows) + "\n\n")
 
-    f.write("## 8. Anexos\n\n")
+    # ---- Costos ----
+    costs_file = os.path.join(BASE, "costs.json")
+    if os.path.exists(costs_file):
+        costs = j(costs_file)
+        f.write("## 8. Costos estimados\n\n")
+        f.write(f"**Proyecto:** {costs.get('project_id', 'N/A')}\n\n")
+        
+        if costs.get("billing_account"):
+            f.write(f"**Billing Account:** {costs['billing_account']}\n\n")
+        
+        est = costs.get("estimated_monthly", {})
+        f.write("### Costos mensuales estimados\n\n")
+        f.write(f"- **Compute (Node Pools):** ${est.get('compute', 0):,.2f} USD\n")
+        f.write(f"- **Storage:** ${est.get('storage', 0):,.2f} USD\n")
+        f.write(f"- **Total estimado:** ${est.get('total', 0):,.2f} USD\n\n")
+        
+        if costs.get("node_pools"):
+            f.write("### Costos por Node Pool\n\n")
+            f.write("| Node Pool | Machine Type | Nodos Promedio | Costo Mensual (USD) |\n")
+            f.write("|---|---|---|---|\n")
+            for np in costs["node_pools"]:
+                f.write(f"| {np['name']} | {np['machine_type']} | {np['avg_nodes']} | ${np['monthly_cost']:,.2f} |\n")
+            f.write("\n")
+        
+        if costs.get("storage_gb", 0) > 0:
+            f.write(f"**Storage total:** {costs['storage_gb']} GB\n\n")
+        
+        f.write(f"*{costs.get('note', '')}*\n")
+        f.write(f"*Última actualización: {costs.get('last_updated', 'N/A')}*\n\n")
+
+    f.write("## 9. Anexos\n\n")
     f.write(f"- Snapshot completo en `{BASE}/`\n")
     f.write("- Relevamiento 100% read-only\n")
 

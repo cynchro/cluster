@@ -49,6 +49,11 @@ kubectl get role,rolebinding,clusterrole,clusterrolebinding -A -o yaml > "${OUTP
 
 echo "✅ Snapshot completo"
 
+# Generar información de costos
+echo "💰 Generando información de costos..."
+export OUTPUT_DIR PROJECT_ID CLUSTER ZONE
+python3 /app/generate_costs.py
+
 # Generar documentación
 echo "📝 Generando documentación..."
 export OUTPUT_DIR CLUSTER ZONE

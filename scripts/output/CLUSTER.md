@@ -367,7 +367,30 @@
 | redis-data-redis-replicas-0 | kuepa | 30Gi | No documentado |
 | redis-data-uk-care-redis-0 | kuepa | 2Gi | No documentado |
 
-## 8. Anexos
+## 8. Costos estimados
+
+**Proyecto:** kuepa-datos
+
+**Billing Account:** 0131ED-143AF7-B895E8
+
+### Costos mensuales estimados
+
+- **Compute (Node Pools):** $600.43 USD
+- **Storage:** $61.54 USD
+- **Total estimado:** $661.97 USD
+
+### Costos por Node Pool
+
+| Node Pool | Machine Type | Nodos Promedio | Costo Mensual (USD) |
+|---|---|---|---|
+| kuepa-pool | e2-standard-4 | 3.5 | $600.43 |
+
+**Storage total:** 362.0 GB
+
+*Costos estimados basados en recursos. Los costos reales pueden variar.*
+*Última actualización: 2026-01-08T13:38:21.699612*
+
+## 9. Anexos
 
 - Snapshot completo en `/app/output/`
 - Relevamiento 100% read-only
