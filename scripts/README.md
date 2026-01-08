@@ -59,12 +59,16 @@ output/
 │   ├── storage.yaml
 │   └── rbac.yaml
 ├── CLUSTER.md          # Documentación generada automáticamente
-└── DIAGRAM.md          # Diagrama Mermaid generado automáticamente
+├── DIAGRAM.md          # Diagrama Mermaid generado automáticamente
+├── diagram.mmd         # Archivo Mermaid puro (intermedio)
+└── diagram.svg         # Diagrama renderizado en SVG (usado en CLUSTER.md)
 ```
 
 Además de los archivos de snapshot, se generan automáticamente:
-- `CLUSTER.md`: Documentación completa del cluster en formato Markdown
-- `DIAGRAM.md`: Diagrama Mermaid con la arquitectura del cluster
+- `CLUSTER.md`: Documentación completa del cluster en formato Markdown con diagrama SVG integrado
+- `DIAGRAM.md`: Diagrama Mermaid con la arquitectura del cluster (formato fuente)
+- `diagram.mmd`: Archivo Mermaid puro (sin backticks) para renderizado
+- `diagram.svg`: Diagrama renderizado en SVG que se muestra en CLUSTER.md (compatible con GitHub)
 
 ## Variables de Entorno
 
@@ -80,6 +84,8 @@ Además de los archivos de snapshot, se generan automáticamente:
 - El kubeconfig se monta como solo lectura
 - Asegúrate de tener los permisos necesarios en GCP para ejecutar los comandos
 - Después del snapshot, se generan automáticamente:
-  - `CLUSTER.md`: Documentación completa del cluster
-  - `DIAGRAM.md`: Diagrama Mermaid de la arquitectura
+  - `CLUSTER.md`: Documentación completa del cluster con diagrama SVG integrado
+  - `DIAGRAM.md`: Diagrama Mermaid de la arquitectura (formato fuente)
+  - `diagram.svg`: Diagrama renderizado que se muestra en GitHub
+- El diagrama se renderiza automáticamente a SVG usando mermaid-cli para compatibilidad con GitHub
 

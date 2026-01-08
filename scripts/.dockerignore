@@ -1,5 +1,6 @@
 output/
 *.json
+!puppeteer-config.json
 *.yaml
 *.yml
 .git/

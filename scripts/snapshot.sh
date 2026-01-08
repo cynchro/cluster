@@ -54,13 +54,17 @@ echo "📝 Generando documentación..."
 export OUTPUT_DIR CLUSTER ZONE
 python3 /app/generate_cluster_doc.py
 
-# Generar diagrama
-echo "📊 Generando diagrama..."
+# Generar diagrama Mermaid
+echo "📊 Generando diagrama Mermaid..."
 python3 /app/generate_diagram.py
+
+# Generar SVG del diagrama
+echo "🖼️  Generando diagrama SVG..."
+export OUTPUT_DIR
+python3 /app/generate_diagram_svg.py
 
 # Inyectar diagrama en la documentación (al final del proceso)
 echo "🔗 Inyectando diagrama en documentación..."
-export OUTPUT_DIR
 python3 /app/inject_diagram_into_cluster_doc.py
 
 echo "✅ Proceso completado"
